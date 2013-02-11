@@ -1,12 +1,12 @@
- class TweetsController < ApplicationController
+class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
 
   before_filter :get_zombie
 
-def get_zombie
-@zombie = @zombie.tweets.find(params[:id])
-end
+  def get_zombie
+    @zombie = @zombie.tweets.find(params[:id])
+  end
 
   def index
     @tweets = @zombie.tweets
